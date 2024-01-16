@@ -1,0 +1,270 @@
+{
+  "id": "63b0babe-3b53-4e0a-b44f-65ae078f32d4",
+  "version": "2.0",
+  "name": "hospi_test",
+  "url": "http://20.109.88.140/signup",
+  "tests": [{
+    "id": "5481d20a-0915-4e5d-aea5-ecb6d3dce49a",
+    "name": "valid_password",
+    "commands": [{
+      "id": "04b911fc-be1d-4b0a-a4e9-992ce84bccdd",
+      "comment": "",
+      "command": "open",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64da9091-08d8-477a-8176-c3ff851ee1de",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "648x648",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "17e5bad5-4edb-4ca9-ba87-f19a0bc5de13",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "23387700-b92a-410f-9205-af996b224161",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [],
+      "value": "01fe21bci051@kletech.ac.in"
+    }, {
+      "id": "1beca476-1efe-45d2-9fd8-c2d98167e7d3",
+      "comment": "",
+      "command": "click",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1f3f0a99-21b0-44a6-b822-ed0bf3f618ed",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [],
+      "value": "kushal@123"
+    }, {
+      "id": "57e0525f-2612-48c7-9ef7-0bea17854a30",
+      "comment": "",
+      "command": "click",
+      "target": "id=Login_loginBtn__zK9qX",
+      "targets": [
+        ["id=Login_loginBtn__zK9qX", "id"],
+        ["css=#Login_loginBtn__zK9qX", "css:finder"],
+        ["xpath=//button[@id='Login_loginBtn__zK9qX']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c1e5092-3042-48e4-8e2c-38d337036650",
+      "comment": "",
+      "command": "waitForText",
+      "target": "id=Dashboard_welcomeBanner__Idp-G",
+      "targets": [
+        ["id=Dashboard_welcomeBanner__Idp-G", "id"],
+        ["css=#Dashboard_welcomeBanner__Idp-G", "css:finder"],
+        ["xpath=//div[@id='Dashboard_welcomeBanner__Idp-G']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/main/div", "xpath:idRelative"],
+        ["xpath=//main/div", "xpath:position"]
+      ],
+      "value": "Welcome!\\n\\nDr. Kushal Patil\\n\\nAt Maltesh Clinic, we believe that every patient deserves the highest quality care possible.\\nOur commitment to excellence in healthcare is matched only by our compassion for those we serve."
+    }, {
+      "id": "fe0fed8e-a457-4237-bbd5-462ffde9b91a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cf02968f-e9a2-40fb-9f9c-262d684bffda",
+    "name": "invalid_password",
+    "commands": [{
+      "id": "f74157bc-eed4-4230-adf4-6cd9cfcacac7",
+      "comment": "",
+      "command": "open",
+      "target": "http://20.109.88.140/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b44809e6-3581-456a-af26-01d9fc6e261f",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac8201aa-3a83-43ee-a9d6-8b3a20e59d7c",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cc6a766e-8fa1-4a30-ac92-e04bf02dbe18",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "01fe21bci051@kletech.ac.in"
+    }, {
+      "id": "dacaace3-ee7e-4164-b6c7-d2272555bc4f",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "abcd@12345"
+    }, {
+      "id": "2a77520e-e001-40c2-8a21-8e7c2f859666",
+      "comment": "",
+      "command": "click",
+      "target": "id=Login_loginBtn__zK9qX",
+      "targets": [
+        ["id=Login_loginBtn__zK9qX", "id"],
+        ["css=#Login_loginBtn__zK9qX", "css:finder"],
+        ["xpath=//button[@id='Login_loginBtn__zK9qX']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1160268e-ce02-436d-b059-8871f5726d4b",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=:r0:",
+      "targets": [
+        ["id=:r0:", "id"],
+        ["css=#\\3Ar0\\3A", "css:finder"],
+        ["xpath=//h2[@id=':r0:']", "xpath:attributes"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Login Error')]", "xpath:innerText"]
+      ],
+      "value": "Login Error"
+    }]
+  }, {
+    "id": "59146e81-dac1-49de-a28b-a8770bf3d12b",
+    "name": "invalid_email",
+    "commands": [{
+      "id": "814dba44-1737-43f7-a6e4-136176d19ac4",
+      "comment": "",
+      "command": "open",
+      "target": "http://20.109.88.140/signup",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "01a652c0-3f15-4d26-a8c3-593b58fdf9e7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "550x691",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4fc9f3fb-673e-436c-bad7-963f3eaf27c1",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='SignUp_signUpform__mcsbY']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d380484-73bf-4513-9038-97055bfeafc4",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='SignUp_signUpform__mcsbY']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": "01fe21bci032"
+    }, {
+      "id": "1211d824-e4ad-4341-95b8-94855cb4f821",
+      "comment": "",
+      "command": "click",
+      "target": "id=SignUp_signUpBtn__N5GUB",
+      "targets": [
+        ["id=SignUp_signUpBtn__N5GUB", "id"],
+        ["css=#SignUp_signUpBtn__N5GUB", "css:finder"],
+        ["xpath=//button[@id='SignUp_signUpBtn__N5GUB']", "xpath:attributes"],
+        ["xpath=//form[@id='SignUp_signUpform__mcsbY']/div[9]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign Up')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "598d9dda-54ee-433f-8833-fbfb82ee093f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=div:nth-child(2) > h2",
+      "targets": [
+        ["css=div:nth-child(2) > h2", "css:finder"],
+        ["xpath=//div[@id='SignUp_signUpBody__meC7e']/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Create An Account')]", "xpath:innerText"]
+      ],
+      "value": "Create An Account"
+    }, {
+      "id": "00db07a6-05d6-4771-930a-d892bd8daee3",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "628e52d2-4117-4a1a-ac9b-a6a4dfd106ee",
+    "name": "login",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["5481d20a-0915-4e5d-aea5-ecb6d3dce49a", "cf02968f-e9a2-40fb-9f9c-262d684bffda"]
+  }],
+  "urls": ["http://20.109.88.140/login", "http://20.109.88.140/signup"],
+  "plugins": []
+}

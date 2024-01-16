@@ -29,7 +29,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGOCONNECTION, { useNewUrlParser: true });
-
+console.log(process.env.MONGOCONNECTION)
 
 app.listen(process.env.PORT, () => {
     console.log("App listening on port " + process.env.PORT);
