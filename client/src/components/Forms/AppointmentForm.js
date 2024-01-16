@@ -22,6 +22,7 @@ function AppointmentForm(props) {
                             props.availableSlots.map(slot => {
                                 if (props.appTime != slot)
                                     return <option value={slot}>{slot}</option>
+                                return null;
                             })
                         }
                     </select>
@@ -50,6 +51,8 @@ function AppointmentForm(props) {
                 </div>
                 <div className="form-group col-11 pl-3 mx-auto">
                     <label for="patient">Patient :</label>
+                    {/* <select name="patient" className="form-control" disabled={currentUser.userType === "Patient"}> */}
+
                     <select name="patient" className="form-control" disabled={currentUser.userType == "Patient" ? true : null}>
                         {props.patientList
                             .map((patient, i) => {
@@ -62,7 +65,7 @@ function AppointmentForm(props) {
                             })}
                     </select>
                 </div>
-            </div>
+            </div> 
             <input type="hidden" name="id" defaultValue={props.appointmentId} />
             <div className="text-center">
                 <input type="submit" className="btn btn-primary my-2 mx-4  col-4 " id="customBtn" value="Submit"></input>
