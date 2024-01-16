@@ -29,7 +29,7 @@ function MedicineList() {
     );
 
     const getmedicines = async () => {
-        const response = await axios.get("http://localhost:3001/medicines", {
+        const response = await axios.get(`${process.env.REACT_APP_URL}:3001/medicines`, {
             params: {
                 name: name
             }
@@ -40,7 +40,7 @@ function MedicineList() {
     const deleteMedicine = async (id) => {
 
         try {
-            await axios.delete(`http://localhost:3001/medicines/${id}`);
+            await axios.delete(`${process.env.REACT_APP_URL}:3001/medicines/${id}`);
             getmedicines();
         } catch (error) {
             setErrorList(error);

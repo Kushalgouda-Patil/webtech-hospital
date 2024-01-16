@@ -19,7 +19,7 @@ function PrescriptionForm(props) {
     // },[medicines])
 
     const getMedicines = async () => {
-        const response = await axios.get("http://localhost:3001/medicines");
+        const response = await axios.get(`${process.env.REACT_APP_URL}:3001/medicines`);
         console.log("medicines", medicines);
         setMedicines(response.data);
     };

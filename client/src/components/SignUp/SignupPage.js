@@ -43,7 +43,7 @@ function SignupPage() {
       confirmPassword: form.confirmPassword.value,
       userType: form.userType.value
     }
-    fetch('http://localhost:3001/signUp', {
+    fetch(`${process.env.REACT_APP_URL}:3001/signUp`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

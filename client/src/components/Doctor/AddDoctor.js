@@ -42,7 +42,7 @@ function Adddoctor() {
     }
 
 
-    fetch('http://localhost:3001/doctors', {
+    fetch(`${process.env.REACT_APP_URL}:3001/doctors`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

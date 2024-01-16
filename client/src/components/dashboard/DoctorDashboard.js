@@ -21,7 +21,7 @@ export default function DoctorDashboard() {
 
 
 	const getAppointmentCount = async () => {
-		const response = await axios.get(`http://localhost:3001/count/appointments`,
+		const response = await axios.get(`${process.env.REACT_APP_URL}:3001/count/appointments`,
 			{
 				headers: {
 					authorization: `Bearer ${localStorage.getItem("token")}`
@@ -37,7 +37,7 @@ export default function DoctorDashboard() {
 	}
 
 	const getPatientsTreatedCount = async () => {
-		const response = await axios.get(`http://localhost:3001/count/patients/treated`,
+		const response = await axios.get(`${process.env.REACT_APP_URL}:3001/count/patients/treated`,
 			{
 				headers: {
 					authorization: `Bearer ${localStorage.getItem("token")}`
@@ -52,7 +52,7 @@ export default function DoctorDashboard() {
 
 	const getBookedSlots = async () => {
 		// console.log(moment(new Date()).format('YYYY-MM-DD'))
-		let response = await axios.post(`http://localhost:3001/appointments`,
+		let response = await axios.post(`${process.env.REACT_APP_URL}:3001/appointments`,
 			{
 				'isTimeSlotAvailable': false,
 				'appDate': moment(new Date()).format('YYYY-MM-DD')
@@ -80,7 +80,7 @@ export default function DoctorDashboard() {
 	}
 	const getPrescription = async () => {
         
-        let response = await axios.post(`http://localhost:3001/prescriptions`,{},
+        let response = await axios.post(`${process.env.REACT_APP_URL}:3001/prescriptions`,{},
             {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("token")}`
@@ -120,7 +120,7 @@ export default function DoctorDashboard() {
 					<h4> Dr. {currentUser.firstName} {currentUser.lastName} </h4>
 					<br/>
 					<div class={styles.horizontalLine}></div>
-					At Green Hills, we believe that every patient deserves the highest quality care possible. 
+					At Maltesh Clinic, we believe that every patient deserves the highest quality care possible. 
 					<br/>
 					Our commitment to excellence in healthcare is matched only by our compassion for those we serve.
 

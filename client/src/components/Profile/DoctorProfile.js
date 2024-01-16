@@ -36,7 +36,7 @@ function DoctorProfile() {
     const getdoctorById = async () => {
         let doctorUserId = currentUser.userId;
     
-        const response = await axios.get(`http://localhost:3001/profile/doctor/`+doctorUserId);
+        const response = await axios.get(`${process.env.REACT_APP_URL}:3001/profile/doctor/`+doctorUserId);
         console.log(response.data._id);
         setDoctorId(response.data._id);
         setFirstName(response.data.userId.firstName);
@@ -57,7 +57,7 @@ function DoctorProfile() {
         //alert("doctorId"+doctorId);
         
         try {
-            await axios.patch(`http://localhost:3001/profile/doctor/${doctorId}`, {
+            await axios.patch(`${process.env.REACT_APP_URL}:3001/profile/doctor/${doctorId}`, {
                 firstName,
                 lastName,
                 username,

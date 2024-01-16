@@ -56,7 +56,7 @@ export default function PatientDashboard() {
 
 	const getBookedSlots = async () => {
     
-            let response = await axios.post(`http://localhost:3001/appointments`,
+            let response = await axios.post(`${process.env.REACT_APP_URL}:3001/appointments`,
                 {
                     'isTimeSlotAvailable': false
                 },
@@ -108,7 +108,7 @@ export default function PatientDashboard() {
     }
 	const getPrescription = async () => {
         
-        let response = await axios.post(`http://localhost:3001/prescriptions`,{},
+        let response = await axios.post(`${process.env.REACT_APP_URL}:3001/prescriptions`,{},
             {
                 headers: {
                     authorization: `Bearer ${localStorage.getItem("token")}`
@@ -143,7 +143,7 @@ export default function PatientDashboard() {
 					<h4> {currentUser.firstName} {currentUser.lastName} </h4>
 					<br/>
 					<div class={styles.horizontalLine}></div>
-					At Green Hills, we believe that every patient deserves the highest quality care possible. 
+					At Maltesh Clinic, we believe that every patient deserves the highest quality care possible. 
 					<br/>
 					Our commitment to excellence in healthcare is matched only by our compassion for those we serve.
 

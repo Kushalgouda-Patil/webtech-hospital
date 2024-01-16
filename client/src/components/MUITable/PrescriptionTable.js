@@ -122,7 +122,7 @@ export default function PrecriptionTable({ prescriptionList }) {
 
     const handleDownloadReceipt = async (value) => {
         // console.log("Download Receipt clicked prescriptionId-", value)
-        const resp = await axios.get(`http://localhost:3001/prescription/invoice/${value}`,
+        const resp = await axios.get(`${process.env.REACT_APP_URL}:3001/prescription/invoice/${value}`,
         {
             responseType: 'blob',
         });

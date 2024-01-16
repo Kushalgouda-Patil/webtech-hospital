@@ -20,7 +20,7 @@ export default function AdminDashboard() {
 	const { currentUser } = useContext(UserContext);
 
 	const getUserCountByRole = async (userType) => {
-		const response = await axios.post(`http://localhost:3001/count/users`,
+		const response = await axios.post(`${process.env.REACT_APP_URL}:3001/count/users`,
 			{
 				'userType': userType
 			},
@@ -41,7 +41,7 @@ export default function AdminDashboard() {
 	};
 
 	const getAppointmentCount = async () => {
-		const response = await axios.get(`http://localhost:3001/count/appointments`,
+		const response = await axios.get(`${process.env.REACT_APP_URL}:3001/count/appointments`,
 			{
 				headers: {
 					authorization: `Bearer ${localStorage.getItem("token")}`
@@ -58,7 +58,7 @@ export default function AdminDashboard() {
 
 	const getBookedSlots = async () => {
 		// console.log(moment(new Date()).format('YYYY-MM-DD'))
-		let response = await axios.post(`http://localhost:3001/appointments`,
+		let response = await axios.post(`${process.env.REACT_APP_URL}:3001/appointments`,
 			{
 				'isTimeSlotAvailable': false,
 				'appDate': moment(new Date()).format('YYYY-MM-DD')
@@ -86,7 +86,7 @@ export default function AdminDashboard() {
 	}
 
 	const getdoctors = async () => {
-		const response = await axios.get("http://localhost:3001/doctors");
+		const response = await axios.get(`${process.env.REACT_APP_URL}:3001/doctors`);
 		setdoctor(response.data);
 	};
 
@@ -110,7 +110,7 @@ export default function AdminDashboard() {
 					<h4>{currentUser.firstName} {currentUser.lastName}</h4>
 					<br/>
 					<div class={styles.horizontalLine}></div>
-					At Green Hills, we believe that every patient deserves the highest quality care possible. 
+					At Maltesh Clinic, we believe that every patient deserves the highest quality care possible. 
 					<br/>
 					Our commitment to excellence in healthcare is matched only by our compassion for those we serve.
 

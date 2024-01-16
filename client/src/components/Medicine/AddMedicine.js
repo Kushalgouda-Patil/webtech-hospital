@@ -37,7 +37,7 @@ function Addmedicine() {
     }
 
 
-    fetch('http://localhost:3001/medicines', {
+    fetch(`${process.env.REACT_APP_URL}:3001/medicines`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'

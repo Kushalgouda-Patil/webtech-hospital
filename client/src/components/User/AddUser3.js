@@ -43,7 +43,7 @@ function AddUser() {
     }
 
 
-    fetch('http://localhost:3001/users', {
+    fetch(`${process.env.REACT_APP_URL}:3001/users`, {
       method: "POST",
       headers: {
         'Content-Type': 'application/json',
