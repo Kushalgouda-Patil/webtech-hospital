@@ -2,7 +2,7 @@
   "id": "63b0babe-3b53-4e0a-b44f-65ae078f32d4",
   "version": "2.0",
   "name": "hospi_test",
-  "url": "http://20.109.88.140/signup",
+  "url": "http://20.109.88.140/login",
   "tests": [{
     "id": "5481d20a-0915-4e5d-aea5-ecb6d3dce49a",
     "name": "valid_password",
@@ -68,26 +68,6 @@
         ["xpath=//button", "xpath:position"],
         ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
       ],
-      "value": ""
-    }, {
-      "id": "2c1e5092-3042-48e4-8e2c-38d337036650",
-      "comment": "",
-      "command": "waitForText",
-      "target": "id=Dashboard_welcomeBanner__Idp-G",
-      "targets": [
-        ["id=Dashboard_welcomeBanner__Idp-G", "id"],
-        ["css=#Dashboard_welcomeBanner__Idp-G", "css:finder"],
-        ["xpath=//div[@id='Dashboard_welcomeBanner__Idp-G']", "xpath:attributes"],
-        ["xpath=//div[@id='root']/div/div/div/main/div", "xpath:idRelative"],
-        ["xpath=//main/div", "xpath:position"]
-      ],
-      "value": "Welcome!\\n\\nDr. Kushal Patil\\n\\nAt Maltesh Clinic, we believe that every patient deserves the highest quality care possible.\\nOur commitment to excellence in healthcare is matched only by our compassion for those we serve."
-    }, {
-      "id": "fe0fed8e-a457-4237-bbd5-462ffde9b91a",
-      "comment": "",
-      "command": "close",
-      "target": "",
-      "targets": [],
       "value": ""
     }]
   }, {
@@ -256,6 +236,314 @@
       "targets": [],
       "value": ""
     }]
+  }, {
+    "id": "20c74d62-56ac-48fc-90c5-ab03ed81e566",
+    "name": "create appointment slot",
+    "commands": [{
+      "id": "62dbfa48-3af5-4c5c-a923-db8f73d28622",
+      "comment": "",
+      "command": "open",
+      "target": "http://20.109.88.140/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84af59c0-88ac-484f-aa3c-114d04b664ce",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "657x771",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "635b7a02-b19f-4fcc-95cb-a3c926fee25a",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "244990c2-91f4-4b22-9684-6b6a7ba4cad5",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "01fe21bci051@kletech.ac.in"
+    }, {
+      "id": "1d1fdfe4-30b4-4e90-a4dc-37f3bb9d3555",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "kushal@123"
+    }, {
+      "id": "eac65eaa-b48c-430e-b736-1ee06641c683",
+      "comment": "",
+      "command": "click",
+      "target": "id=Login_loginBtn__zK9qX",
+      "targets": [
+        ["id=Login_loginBtn__zK9qX", "id"],
+        ["css=#Login_loginBtn__zK9qX", "css:finder"],
+        ["xpath=//button[@id='Login_loginBtn__zK9qX']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "615cf549-96fd-4053-9990-5ddb7e3f85f9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.MuiListItem-root:nth-child(2) .MuiTypography-root",
+      "targets": [
+        ["css=.MuiListItem-root:nth-child(2) .MuiTypography-root", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/ul/li[2]/a/div[2]/span", "xpath:idRelative"],
+        ["xpath=//li[2]/a/div[2]/span", "xpath:position"],
+        ["xpath=//span[contains(.,'Appointments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "208b4601-1cae-4673-9a50-c426485d1006",
+      "comment": "",
+      "command": "click",
+      "target": "id=doctor",
+      "targets": [
+        ["id=doctor", "id"],
+        ["name=doctor", "name"],
+        ["css=#doctor", "css:finder"],
+        ["xpath=//select[@id='doctor']", "xpath:attributes"],
+        ["xpath=//form[@id='createSlotForm']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17d19ba4-173b-4b6d-b8fb-3c9a31ae16de",
+      "comment": "",
+      "command": "select",
+      "target": "id=doctor",
+      "targets": [],
+      "value": "label=Neelkhant Baljoshi"
+    }, {
+      "id": "02dba0fd-0e86-4f2a-99fb-b2d0957d79d9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#doctor > option:nth-child(3)",
+      "targets": [
+        ["css=#doctor > option:nth-child(3)", "css:finder"],
+        ["xpath=//option[@value='65a6e16c5f516586105ebbf3']", "xpath:attributes"],
+        ["xpath=//select[@id='doctor']/option[3]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select/option[3]", "xpath:position"],
+        ["xpath=//option[contains(.,'Neelkhant Baljoshi')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9e80a575-034e-489f-ac76-9a3631db4130",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.Appointment_slotCard__1Wamz:nth-child(2)",
+      "targets": [
+        ["css=.Appointment_slotCard__1Wamz:nth-child(2)", "css:finder"],
+        ["xpath=//main[@id='Appointment_appointmentMain__9brBn']/div[4]/div[2]", "xpath:idRelative"],
+        ["xpath=//div[4]/div[2]", "xpath:position"]
+      ],
+      "value": "9:30 AM"
+    }]
+  }, {
+    "id": "b6da85d8-adcb-4038-9851-a43cab2fc5e1",
+    "name": "book appointment",
+    "commands": [{
+      "id": "baa9f788-7c54-48c9-8e8f-13105cac6ff9",
+      "comment": "",
+      "command": "open",
+      "target": "http://20.109.88.140/login",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0676577-83fc-4e52-8407-8d2f6bd519ed",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "657x771",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9286572c-eb06-498b-a463-d7c233f00fcf",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["name=email", "name"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "01fe21bci051@kletech.ac.in"
+    }, {
+      "id": "fbda4665-670f-457e-84e5-f13d34953bf7",
+      "comment": "",
+      "command": "type",
+      "target": "id=password",
+      "targets": [
+        ["id=password", "id"],
+        ["name=password", "name"],
+        ["css=#password", "css:finder"],
+        ["xpath=//input[@id='password']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "kushal@123"
+    }, {
+      "id": "3bbdb10e-111a-49ba-89c0-145cae0f2d6e",
+      "comment": "",
+      "command": "click",
+      "target": "id=Login_loginBtn__zK9qX",
+      "targets": [
+        ["id=Login_loginBtn__zK9qX", "id"],
+        ["css=#Login_loginBtn__zK9qX", "css:finder"],
+        ["xpath=//button[@id='Login_loginBtn__zK9qX']", "xpath:attributes"],
+        ["xpath=//form[@id='loginForm']/div[3]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Login')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "30b1833e-9c40-4056-92c8-550a4c9d957b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Appointments",
+      "targets": [
+        ["linkText=Appointments", "linkText"],
+        ["css=.MuiListItem-root:nth-child(2) > .MuiButtonBase-root", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/ul/li[2]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/appointments')]", "xpath:href"],
+        ["xpath=//li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Appointments')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "706f7e7c-a698-4912-bb2e-6f561c1d2868",
+      "comment": "",
+      "command": "click",
+      "target": "id=department",
+      "targets": [
+        ["id=department", "id"],
+        ["name=department", "name"],
+        ["css=#department", "css:finder"],
+        ["xpath=//select[@id='department']", "xpath:attributes"],
+        ["xpath=//form[@id='createSlotForm']/div/div/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c859e68-dcd7-461b-b761-d0724d8b5062",
+      "comment": "",
+      "command": "select",
+      "target": "id=department",
+      "targets": [],
+      "value": "label=Gynecology"
+    }, {
+      "id": "f041db2d-9bc7-46cc-8701-8bd8563b68c1",
+      "comment": "",
+      "command": "click",
+      "target": "css=#department > option:nth-child(2)",
+      "targets": [
+        ["css=#department > option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='Gynecology']", "xpath:attributes"],
+        ["xpath=//select[@id='department']/option[2]", "xpath:idRelative"],
+        ["xpath=//option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'Gynecology')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "500045ba-2af8-4d5f-9638-650995a8bccf",
+      "comment": "",
+      "command": "click",
+      "target": "id=doctor",
+      "targets": [
+        ["id=doctor", "id"],
+        ["name=doctor", "name"],
+        ["css=#doctor", "css:finder"],
+        ["xpath=//select[@id='doctor']", "xpath:attributes"],
+        ["xpath=//form[@id='createSlotForm']/div[2]/div/select", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4f64d3c-b7cc-466c-b4ed-c9c92898b93c",
+      "comment": "",
+      "command": "select",
+      "target": "id=doctor",
+      "targets": [],
+      "value": "label=Khushi Habib"
+    }, {
+      "id": "c26cf590-072b-4c44-816d-06e0a11f25bf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#doctor > option:nth-child(2)",
+      "targets": [
+        ["css=#doctor > option:nth-child(2)", "css:finder"],
+        ["xpath=//option[@value='65a6dfbf5f516586105ebb06']", "xpath:attributes"],
+        ["xpath=//select[@id='doctor']/option[2]", "xpath:idRelative"],
+        ["xpath=//div[2]/div/select/option[2]", "xpath:position"],
+        ["xpath=//option[contains(.,'Khushi Habib')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bf5223ef-77ee-43fd-85f2-7344786b5dcc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Appointment_slotCard__1Wamz:nth-child(1)",
+      "targets": [
+        ["css=.Appointment_slotCard__1Wamz:nth-child(1)", "css:finder"],
+        ["xpath=//main[@id='Appointment_appointmentMain__9brBn']/div[4]/div", "xpath:idRelative"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "25dd3148-6a74-4730-8e99-243781933c03",
+      "comment": "",
+      "command": "click",
+      "target": "id=customBtn",
+      "targets": [
+        ["id=customBtn", "id"],
+        ["css=#customBtn", "css:finder"],
+        ["xpath=//input[@id='customBtn']", "xpath:attributes"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7a7788e-06e3-46aa-bd87-9c761dc28c8c",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.MuiTableCell-body:nth-child(1)",
+      "targets": [
+        ["css=.MuiTableCell-body:nth-child(1)", "css:finder"],
+        ["xpath=//main[@id='Appointment_appointmentMain__9brBn']/div[5]/div/div/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'Sumit M')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "628e52d2-4117-4a1a-ac9b-a6a4dfd106ee",
@@ -264,6 +552,13 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["5481d20a-0915-4e5d-aea5-ecb6d3dce49a", "cf02968f-e9a2-40fb-9f9c-262d684bffda"]
+  }, {
+    "id": "ca0c762e-80b6-4ed4-9adb-68488b59cf5c",
+    "name": "appointment",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
   }],
   "urls": ["http://20.109.88.140/login", "http://20.109.88.140/signup"],
   "plugins": []
